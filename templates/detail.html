@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">                                                      <head>
+ <link rel="stylesheet" type="text/css" href="loader.css" />            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+      </head>
+<style>
+
+#webbody {
+                                                                        
+    position: absolute;
+    padding: 2px;
+    top: 8%;
+    left: 2%;
+    right: 2%;
+    color: white;                                               
+    background-color: transparent;
+    width: 376px;
+    overflow: scroll;							
+																						
+}
+
+</style>
+<body style="font-family:sans-serif;
+    background:rgb(27,27,28);
+    color:white;width:377px;">
+
+{% for p in photos %}
+
+  <img src="{{p.images.url}}" alt="readcomic" style="width:390px;left:0%">
+{% endfor %}
+
+<footer>
+</footer>
+</body>
+</html>

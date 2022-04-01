@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" style="overflow:hidden;">
+      <div class="item active">
+        <img src="https://www.myce.com/wp-content/images_posts/2020/07/72c52aaa8b180672bd5c097576c89070_naruto.jpeg" alt="Los Angeles" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Naruto</h3>
+          <p>Shonen & Comedy</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2019/10/one-piece-stampede1.jpg" alt="Chicago" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>One Piece</h3>
+          <p>Shonen, Comdey & Drama</p>
+        </div>
+      </div>
+
+    <div class="item">
+        <img src="https://thecinemaholic.com/wp-content/uploads/2020/12/attack-on-titan-season-4-1250575-1280x0-1.jpeg" alt="New York" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Attack On Titan</h3>
+          <p>Seinan & Drama</p>
+        </div>
+      </div>
+       </div>
+
+  </div class="Latestcomics" id="Latestcomics">
+      <h3>Latest Comics</h3>
+      {% for post in posts %}
+      <div class="list-group">
+
+      <a href="{% url 'detail' post.id %}" class="list-group-item list-group-item-action"> {{post.title}} | Episode - {{post.episode}} </a>
+      </div>
+{% endfor %}
+</div>
+
+{% endblock %}
